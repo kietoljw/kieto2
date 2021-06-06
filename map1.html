@@ -634,7 +634,7 @@
 			return res;
 		}
 
-		var color = ['#9ae5fc', '#dcbf71']; // 自定义图中要用到的颜色
+		var color = ['#03A9F4', '#dcbf71']; // 自定义图中要用到的颜色
 		var series = []; // 用来存储地图数据
 
 		[
@@ -669,7 +669,7 @@
 				symbolSize: 12,
 				effect: {
 					show: true,
-					period: 6,
+					period: 4,
 					trailLength: 0,
 					symbol: planePath, // 特效形状，可以用其他svg pathdata路径代替
 					symbolSize: 6
@@ -694,12 +694,14 @@
 					normal: { // 默认的文本标签显示样式
 						show: true,
 						position: 'left', // 标签显示的位置
-						formatter: '{b}' // 标签内容格式器
+						formatter: '{b}',  // 标签内容格式器
+						color: '#FFD180'
 					}
 				},
 				itemStyle: {
 					normal: {
-						color: color[0]
+						color: "#FF9E80",
+						opacity: 0.6
 					}
 				},
 				data: item[1].map(function(dataItem) {
@@ -732,7 +734,7 @@
 			},
 			itemStyle: {
 				normal: {
-					color: color[1]
+					color: '#FF5722'
 				}
 			},
 			data: [{
@@ -748,7 +750,7 @@
 
 		// 最后初始化世界地图中的相关数据
 		chart.setOption({
-			backgroundColor: '#101724',
+			backgroundColor: '#263238',
 			title: {
 				//text: '中国国际贸易促进委员会',
 				//subtext: '国别资讯',
@@ -764,10 +766,10 @@
 				roam: false, // 禁止缩放平移
 				itemStyle: { // 每个区域的样式
 					normal: {
-						areaColor: 'grey'
+						areaColor: '#607D8B'
 					},
 					emphasis: {
-						areaColor: 'green'
+						areaColor: '#B2FF59'
 					}
 				},
 				regions: [{ // 选中的区域
